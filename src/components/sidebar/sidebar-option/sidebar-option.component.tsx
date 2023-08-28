@@ -15,3 +15,5 @@ export function SidebarOption({ Icon, title, number }: SidebarOptionProps) {
     </div>
   );
 }
+
+// 3:47 std
