@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
 import { Header, Sidebar } from "./components";
 import { EmailList, Mail } from "./pages";
+
+import "./App.scss";
 
 function App() {
   return (
@@ -9,12 +10,15 @@ function App() {
       <Router>
         <div className="app">
           <Header />
-          <Sidebar />
 
-          <Routes>
-            <Route path="/" element={<EmailList />} />
-            <Route path="/Mail" element={<Mail />} />
-          </Routes>
+          <div className="app__body">
+            <Sidebar />
+
+            <Routes>
+              <Route path="/" element={<EmailList />} />
+              <Route path="/Mail" element={<Mail />} />
+            </Routes>
+          </div>
         </div>
       </Router>
     </>

@@ -6,3 +6,12 @@
   --secondary-background: whitesmoke;
   --primary-border: 1px solid whitesmoke;
 }
+
+.app {
+  height: 100vh;
+
+  &__body {
+    display: flex;
+    height: 100vh;
+  }
+}

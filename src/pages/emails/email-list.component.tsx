@@ -8,8 +8,15 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
 import SettingsIcon from "@mui/icons-material/Settings";
+import InboxIcon from "@mui/icons-material/Inbox";
+import PeopleIcon from "@mui/icons-material/People";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import { Section } from "../../components";
+import { useState } from "react";
 
 export function EmailList() {
+  const [selectedSection, setSelectedSection] = useState("");
+
   return (
     <div className="emailList">
       <div className="emailList__settings">
@@ -39,6 +46,30 @@ export function EmailList() {
             <SettingsIcon />
           </IconButton>
         </div>
+      </div>
+
+      <div className="emailList__sections">
+        <Section
+          Icon={InboxIcon}
+          title={"Posteingang"}
+          color={"red"}
+          selected={selectedSection === "Posteingang"}
+          setSelected={setSelectedSection}
+        />
+        <Section
+          Icon={PeopleIcon}
+          title={"Freunde & Familie"}
+          color={"green"}
+          selected={selectedSection === "Freunde & Familie"}
+          setSelected={setSelectedSection}
+        />
+        <Section
+          Icon={LocalOfferIcon}
+          title={"Werbung & Angebote"}
+          color={"black"}
+          selected={selectedSection === "Werbung & Angebote"}
+          setSelected={setSelectedSection}
+        />
       </div>
     </div>
   );
