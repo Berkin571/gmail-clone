@@ -19,6 +19,7 @@ export function Section({
   const [hovered, setHovered] = useState(false);
 
   const handleStyle = hovered || selected;
+
   return (
     <div
       className={`section ${handleStyle && "section--selected"}`}

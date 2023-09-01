@@ -11,7 +11,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import InboxIcon from "@mui/icons-material/Inbox";
 import PeopleIcon from "@mui/icons-material/People";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import { Section } from "../../components";
+import { EmailRow, Section } from "../../components";
 import { useState } from "react";
 
 export function EmailList() {
@@ -69,6 +69,23 @@ export function EmailList() {
           color={"black"}
           selected={selectedSection === "Werbung & Angebote"}
           setSelected={setSelectedSection}
+        />
+      </div>
+
+      <div className="emailList__list">
+        <EmailRow
+          id={"1"}
+          title={"Twitch"}
+          subject={"Hey fellow streamer!"}
+          description={"This is blabla"}
+          time={"14:34"}
+        />
+        <EmailRow
+          id={"1"}
+          title={"Twitch"}
+          subject={"Hey fellow streamer!"}
+          description={"This is blabla"}
+          time={"14:34"}
         />
       </div>
     </div>

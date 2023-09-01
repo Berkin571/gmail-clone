@@ -5,7 +5,7 @@
   min-width: 200px;
   cursor: pointer;
   border-width: 0 !important;
-  height: calc(100% + 3px);
+  height: calc(100% + 2px);
 
   &--selected {
     background-color: var(--secondary-background);
